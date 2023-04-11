@@ -4,6 +4,9 @@ const ComponentsPlugin = require('unplugin-vue-components/webpack');
 
 module.exports = defineConfig({
   lintOnSave: false,
-  transpileDependencies: true
+  transpileDependencies: true,
+  devServer: {
+
+  }
 })
 

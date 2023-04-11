@@ -1,5 +1,5 @@
 <template>
- <div>
+ <div class="main">
   <router-view></router-view>
   <tabbar v-show="isShow"></tabbar>
  </div>
@@ -22,9 +22,13 @@ body {
 import tabbar from '@/components/Tabbar.vue'
 import '@/assets/iconfont/iconfont.css'
 import 'vant/lib/index.css'
-import {provide, ref} from 'vue'
+import {provide, ref,onMounted} from 'vue'
 
 const isShow=ref(true);
 /* 把父组件状态传给子组件用，用来管理是否显示底部导航 */
 provide('isTabbarShow',isShow)
+
+onMounted(() => {
+ 
+})
 </script>
