@@ -36,11 +36,9 @@
 
     const afterRead = async (file) => {
       // 此时可以自行将文件上传至服务器
-      const blob = base64ToBlob(file.content);
-      const newFile = blobToFile(blob, '123');
-      console.log(newFile)
       /* 修改头像 */
-      userList.value.set("UserAvatar",newFile);
+      console.log(file.file)
+      userList.value.set("UserAvatar",file.file);
       userList.value.set("isAvatar",true);
 
       await HTTP({
